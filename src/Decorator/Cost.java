@@ -12,7 +12,6 @@ public class Cost {
     }
 
     public void addToCost(double cost){
-        this.cost.removeLast();
         this.cost.add(cost);
         calculateTotalCost();
     }
@@ -20,21 +19,25 @@ public class Cost {
     private void calculateTotalCost(){
         double totalCost = 0;
         for (double cost : this.cost){
-            totalCost=++cost;
+            totalCost+=cost;
         }
         this.totalCost=totalCost;
     }
 
     @Override
     public String toString() {
-        String costString=this.cost.get(0).toString();
+        String costString="";
         int size=cost.size();
         int i=0;
         for (double cost : this.cost){
-            if (i == size) {
-                costString= costString.concat(" ="+ totalCost);
-            } else {
-                costString= costString.concat(" +"+ cost);
+            if (i!=0) {
+                costString= costString.concat(" +");
+            }
+
+            costString= costString.concat(""+ cost);
+
+            if (i==size-1) {
+                costString= costString.concat(" = "+ String.format("%.2f",totalCost));
             }
             i++;
         }
