@@ -1,7 +1,8 @@
 package Observer;
 
-public class StockBrokerAgency implements Observer{
+public class StockBrokerAgency implements Observer {
     private final String name;
+
     public StockBrokerAgency(String name) {
         this.name = name;
     }
