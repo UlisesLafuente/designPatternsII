@@ -9,6 +9,7 @@ public class Cost {
 
     public Cost(Double cost){
         this.cost.add(cost);
+        calculateTotalCost();
     }
 
     public void addToCost(double cost){
