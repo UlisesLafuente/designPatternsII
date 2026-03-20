@@ -11,7 +11,9 @@ public class Sugar extends BubbleTeaDecorator {
     }
 
     @Override
-    public String getCost() {
-        return decoratedBubbleTea.getCost()+" +0.30";
+    public Cost getCost() {
+        Cost cost = decoratedBubbleTea.getCost();
+        cost.addToCost(0.30);
+        return cost;
     }
 }

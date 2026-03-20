@@ -15,7 +15,9 @@ public class Flavor extends BubbleTeaDecorator {
     }
 
     @Override
-    public String getCost() {
-        return decoratedBubbleTea.getCost()+" +0.60";
+    public Cost getCost() {
+        Cost cost = decoratedBubbleTea.getCost();
+        cost.addToCost(0.60);
+        return cost;
     }
 }

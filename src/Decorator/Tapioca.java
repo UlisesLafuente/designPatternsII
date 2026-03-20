@@ -11,7 +11,9 @@ public class Tapioca extends BubbleTeaDecorator {
     }
 
     @Override
-    public String getCost() {
-        return decoratedBubbleTea.getCost()+" +0.50";
+    public Cost getCost() {
+        Cost cost = decoratedBubbleTea.getCost();
+        cost.addToCost(0.50);
+        return cost;
     }
 }

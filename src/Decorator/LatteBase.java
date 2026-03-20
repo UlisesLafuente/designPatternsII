@@ -8,7 +8,7 @@ public class LatteBase implements BubbleTea {
     }
 
     @Override
-    public String getCost() {
-        return "3.5";
+    public Cost getCost() {
+        return new Cost(3.5);
     }
 }

@@ -14,7 +14,7 @@ public abstract class BubbleTeaDecorator implements BubbleTea {
     }
 
     @Override
-    public String getCost() {
+    public Cost getCost() {
         return decoratedBubbleTea.getCost();
     }
 }
